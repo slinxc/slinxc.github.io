@@ -1,0 +1,92 @@
+<script type="text/javascript" language="javascript">
+	function check(form) {
+	 if((form.callsign.value.indexOf("A-0") == 0) || (form.callsign.value.indexOf("A-1") == 0) || (form.callsign.value.indexOf("A-2") == 0) || (form.callsign.value.indexOf("A-3") == 0) || (form.callsign.value.indexOf("A-4") == 0)){
+	if(form.password.value == "ADMIN")
+  {
+window.location.replace("/splash.html");
+  }
+  }
+
+ 
+if((form.callsign.value.indexOf("C-2") == 0) || (form.callsign.value.indexOf("C-3") == 0)){
+	if(form.password.value == "SAHP")
+  {
+window.location.replace("/sahp.html");
+  }
+  }
+
+ 
+if((form.callsign.value.indexOf("D-4") == 0) || (form.callsign.value.indexOf("D-5") == 0)){
+	if(form.password.value == "BCSO")
+  {
+window.location.replace("/bcso.html");
+  }
+  }
+
+ 
+if((form.callsign.value.indexOf("E-6") == 0) || (form.callsign.value.indexOf("E-7") == 0)){
+	if(form.password.value == "SASP")
+  {
+window.location.replace("/sasp.html");
+  }
+  }
+
+ 
+if((form.callsign.value.indexOf("F-0") == 0) || (form.callsign.value.indexOf("F-1") == 0) || (form.callsign.value.indexOf("F-2") == 0) || (form.callsign.value.indexOf("F-3") == 0) || (form.callsign.value.indexOf("F-4") == 0) || (form.callsign.value.indexOf("F-5") == 0) || (form.callsign.value.indexOf("F-6") == 0) || (form.callsign.value.indexOf("F-7") == 0)) {
+	if(form.password.value == "FIRE")
+  {
+window.location.replace("/fire.html");
+  }
+  }
+
+ }</script>
+<html>
+<head>
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<title>JCRPClient32 V3 Mobile Data Center</title>
+<style type="text/css">
+.auto-style2 {
+	margin-left: 54px;
+	margin-top: 0px;
+}
+.auto-style5 {
+	margin-left: 0px;
+	margin-top: 0px;
+}
+.auto-style6 {
+	text-align: center;
+}
+.auto-style7 {
+	margin-left: 63px;
+	margin-top: 0px;
+}
+</style>
+
+<body style="height: 960px; ">
+<div style="height: 960px; background-image:url('https://raw.githubusercontent.com/slinxc/slinxc.github.io/master/img/login.png');background-repeat:no-repeat;background-position:center"
+	
+</div>
+<table cellspacing="10" style="width: 35%; height: 12%" align="center">
+			<tr>
+				<td style="height: 492px">
+				</td>
+			</tr>
+			<tr>
+				<td class="auto-style6">
+				<form method="post" name="login">
+					<input type="text" placeholder="Unit Number" class="auto-style2" name="callsign" style="height: 31px; width: 426px">
+				</td>
+			</tr>
+			<tr>
+				<td style="height:44px">
+					<input type="password" placeholder="Password" class="auto-style7" name="password" style="height: 31px; width: 426px" >
+					
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+					<input type="button" onClick="check(this.form)" value="Login" class="auto-style5" style="height: 34px; width: 70px"></form></td>
+			</tr></center>
+		</table>
+		
