@@ -1,0 +1,28 @@
+﻿<script src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$.getJSON("https://spreadsheets.google.com/feeds/list/1gjdYExQDCzJL0oR2bwpNQpRaH6AbX2QkmPIn_moG6YM/od6/public/values?alt=json", function(data) {
+  //first row "title" column
+  console.log(data.feed.entry[0]['gsx$signal-100']['$t']);
+	if ((data.feed.entry[0]['gsx$signal-100']['$t']) == 1) {
+			signalfx.play();
+			setTimeout(function(){window.location.reload(1);}, 12000);
+}
+	if ((data.feed.entry[0]['gsx$signal-100']['$t']) == 0) {
+		setTimeout(function(){window.location.reload(1);}, 2000);
+		}
+
+});
+
+	var signalfx = new Audio("/tones/Signal100ToneLONG.mp3");
+
+		
+</script>
+
+<html>
+<head>
+<meta content="en-us" http-equiv="Content-Language">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<title>JCRPClient32 Signal-100 Utility</title>
+</head>
+</html>
+
