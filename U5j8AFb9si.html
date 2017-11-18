@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+<meta content="en-us" http-equiv="Content-Language">
+<link rel="shortcut icon" type="image/png" href="../../My%20Web%20Sites/favicon.png">
+<title>JCRPClient32 V3 Mobile Data Center</title>
+
+
+<style type="text/css">
+
+.button {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #000000;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #85d181;
+  text-decoration: none;
+}
+.auto-style2 {
+	margin-top: 410px;
+}
+.auto-style3 {
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	color: #000000;
+	font-size: 20px;
+	background: #ffffff;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style4 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+
+
+<body style="height: 960px; ">
+<div style="height: 960px; background-image:url('../../My%20Web%20Sites/img/status.png'); background-repeat:no-repeat;background-position:center"
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><center>
+		<script src="../../My%20Web%20Sites/jquery-latest.min.js" type="text/javascript"></script>
+
+			<form id="input-form" action="" method="POST" target="no-target" class="auto-style2">
+			  <input id="callsign" placeholder="Callsign" name="callsign" class="auto-style4"><br class="auto-style4">
+  			<button class="auto-style3" id="form-submit" type="submit">Submit</button>
+			</form>
+
+			<iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
+
+				<script>
+				    $('#input-form').on('submit',function(){
+				        var callsignUID = encodeURIComponent($("#callsign").val());
+				        var callsignID = "entry.1313128958";
+				        var baseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeEJ_MrboJfCeqKwC6GwPQAuW3kpuQdQ9pjUMZoYZawqje5Nw/formResponse?";
+				        var submitRef = '&submit=Submit';
+				        var submitURL = (baseURL + callsignID + "=" + callsignUID + submitRef);
+				        console.log(submitURL);
+				        $(this)[0].action=submitURL;
+				        $('#input-form').text("Successfully showed " + callsignUID + " as on-duty.");
+				    });
+				</script>			
+			</center>
+		&nbsp;</td>
+	</tr>
+</table>
+	
+</div>
+</div>
+
